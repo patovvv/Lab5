@@ -16,7 +16,7 @@ class Humano(Personaje):
 
     
     #Metodo "SuperBono" paso a llamarse "HabilidadEspecial" para facilidad de compilacion
-    def HabilidadEspecial(self):
+    def SuperBono(self):
         while True:
             try:
                 Vacio()
@@ -43,10 +43,17 @@ class Humano(Personaje):
         return super().Historia()
 
     def Victoria(self):
-        return super().Victoria()
+        texto="{} a salido victorioso!".format(self.GetNombre())
+        print(texto)
+        Vacio()
+        print(self)
+        
 
     def Derrota(self):
-        return super().Derrota()
+        text="{} a perdido...".format(self.GetNombre())
+        texto="Los Humanos han peleado durante 300 años una guerra interminable para apropiarse de los recursos naturales del lugar, pero finalmente han sido derrotados por lo que deberan escapar los sobrevivientes e intentar formar una nueva civilizacion..."
+        print(text)
+        print(texto)
 def Vacio():
     print("")
 

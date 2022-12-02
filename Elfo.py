@@ -17,13 +17,13 @@ class Elfo(Personaje):
 
     
     #Metodo "QuitaVida" paso a llamarse "HabilidadEspecial" para facilidad de compilacion
-    def HabilidadEspecial(self,b):
+    def QuitaVida(self,b):
         a="Elfo - {}".format(self.GetNombre())
         print(a)
         print("Habilidad especial: Quita Vida")
         Vacio()
         b.SetVida(b.GetVida()*0.9)
-        texto=("{} a invocado la habilidad 'Quita vida', la vida del enemigo a sido reducida en un 90%").format(self.GetNombre())
+        texto=("{} a invocado la habilidad 'Quita vida', la vida de {} a sido reducida en un 90%").format(self.GetNombre(),b.GetNombre())
         print(texto)
         Vacio()
 
@@ -31,9 +31,16 @@ class Elfo(Personaje):
         return super().Historia()
 
     def Victoria(self):
-        return super().Victoria()
+        texto="{} a salido victorioso!".format(self.GetNombre())
+        print(texto)
+        Vacio()
+        print(self)
 
     def Derrota(self):
-        return super().Derrota()
+        text="{} a perdido...".format(self.GetNombre())
+        texto="Los Elfos han intentado esclavizar a las demas razas por lo que han llevado una guerra durante 300 años. Pero por fin han sido derrotados, esto marcara un antes y despues en las futuras generaciones..."
+        print(text)
+        print(texto)
+
 def Vacio():
     print("")

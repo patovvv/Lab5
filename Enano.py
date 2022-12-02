@@ -15,7 +15,7 @@ class Enano(Personaje):
         self.__clan=clan
 
     #Metodo "AumentaVida" paso a llamarse "HabilidadEspecial" para facilidad de compilacion
-    def HabilidadEspecial(self):
+    def AumentaVida(self):
         while True:
             try:
                 a="Enano - {}".format(self.GetNombre())
@@ -31,6 +31,7 @@ class Enano(Personaje):
                 Vacio()     
                 break           
             except:
+                Vacio()
                 print("Ingrese solo numeros...")
 
 
@@ -38,10 +39,16 @@ class Enano(Personaje):
         return super().Historia()
 
     def Victoria(self):
-        return super().Victoria()
+        texto="{} a salido victorioso!".format(self.GetNombre())
+        print(texto)
+        Vacio()
+        print(self)
 
     def Derrota(self):
-        return super().Derrota()
+        text="{} a perdido...".format(self.GetNombre())
+        texto="Los Enanos han intentado evitar la guerra de los 300 años, pero no han conseguido escapar de esta. Esto marcara la esclavitud de la raza Enana...Hasta que ocurra una posible futura revolucion"
+        print(text)
+        print(texto)
 def Vacio():
     print("")
     
