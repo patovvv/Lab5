@@ -15,8 +15,6 @@ class Elfo(Personaje):
     def SetReino(self,reino):
         self.__reino=reino
 
-    
-    #Metodo "QuitaVida" paso a llamarse "HabilidadEspecial" para facilidad de compilacion
     def QuitaVida(self,b):
         a="Elfo - {}".format(self.GetNombre())
         print(a)
@@ -32,7 +30,6 @@ class Elfo(Personaje):
         texto="Los Elfos han intentado esclavizar a las demas razas por lo que han llevado una guerra durante 300 años. Pero por fin han sido derrotados, esto marcara un antes y despues en las futuras generaciones..."
         print(texto)
         
-
     def Victoria(self):
         Vacio()
         texto="{} a salido victorioso!".format(self.GetNombre())

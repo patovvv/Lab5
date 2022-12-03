@@ -14,8 +14,6 @@ class Humano(Personaje):
     def SetFamilia(self,familia):
         self.__familia=familia
 
-    
-    #Metodo "SuperBono" paso a llamarse "HabilidadEspecial" para facilidad de compilacion
     def SuperBono(self):
         while True:
             try:
@@ -51,7 +49,6 @@ class Humano(Personaje):
         Vacio()
         print(self)
         
-
     def Derrota(self):
         text="{} a perdido...".format(self.GetNombre())
         texto="Los Humanos han peleado durante 300 años una guerra interminable para apropiarse de los recursos naturales del lugar, pero finalmente han sido derrotados por lo que deberan escapar los sobrevivientes e intentar formar una nueva civilizacion..."
