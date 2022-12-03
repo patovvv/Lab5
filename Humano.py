@@ -32,8 +32,10 @@ class Humano(Personaje):
                     
                 valor=dmage-2
                 self.SetDamage(self.GetDamage()+valor)
+                Vacio()
                 texto="El daño de {} aumento en {}, el nuevo daño total es: {}".format(self.GetNombre(),valor,self.GetDamage())
                 print(texto)
+                Espacio()
                 Vacio()
                 break                
             except:
@@ -43,6 +45,7 @@ class Humano(Personaje):
         return super().Historia()
 
     def Victoria(self):
+        Vacio()
         texto="{} a salido victorioso!".format(self.GetNombre())
         print(texto)
         Vacio()
@@ -54,9 +57,13 @@ class Humano(Personaje):
         texto="Los Humanos han peleado durante 300 años una guerra interminable para apropiarse de los recursos naturales del lugar, pero finalmente han sido derrotados por lo que deberan escapar los sobrevivientes e intentar formar una nueva civilizacion..."
         print(text)
         print(texto)
+        self.ActualizaArma()
+
+    def ActualizaArma(self):
+        a=input("Actualice arma del humano: ")
+        self.SetArma(a)
+
 def Vacio():
     print("")
-
-
-
-
+def Espacio():
+    enter=input("Ingrese la tecla enter para continuar...")

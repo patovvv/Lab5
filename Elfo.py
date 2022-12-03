@@ -26,11 +26,15 @@ class Elfo(Personaje):
         texto=("{} a invocado la habilidad 'Quita vida', la vida de {} a sido reducida en un 90%").format(self.GetNombre(),b.GetNombre())
         print(texto)
         Vacio()
+        Espacio()
 
-    def Historia(self):
-        return super().Historia()
+    def Historia(self):   
+        texto="Los Elfos han intentado esclavizar a las demas razas por lo que han llevado una guerra durante 300 años. Pero por fin han sido derrotados, esto marcara un antes y despues en las futuras generaciones..."
+        print(texto)
+        
 
     def Victoria(self):
+        Vacio()
         texto="{} a salido victorioso!".format(self.GetNombre())
         print(texto)
         Vacio()
@@ -38,9 +42,10 @@ class Elfo(Personaje):
 
     def Derrota(self):
         text="{} a perdido...".format(self.GetNombre())
-        texto="Los Elfos han intentado esclavizar a las demas razas por lo que han llevado una guerra durante 300 años. Pero por fin han sido derrotados, esto marcara un antes y despues en las futuras generaciones..."
         print(text)
-        print(texto)
+        self.Historia()
 
 def Vacio():
     print("")
+def Espacio():
+    enter=input("Ingrese la tecla enter para continuar...")

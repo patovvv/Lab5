@@ -41,6 +41,7 @@ def Atacar(a,b):
             print(text1)
             time.sleep(1)
             b.SetVida((b.GetVida()-a.GetDamage()))##personaje 1 ataca a personaje 2
+            Vacio()
             VerificarVida(b,a)
             if v==0:
                 break
@@ -50,8 +51,8 @@ def Atacar(a,b):
             text="{} a atacado a {}".format(a.GetNombre(),b.GetNombre())
             print(text)
             b.SetVida((b.GetVida()-a.GetDamage()))##personaje 1 ataca a personaje 2
-
             time.sleep(1)
+            Vacio()
             VerificarVida(b,a)
             if v==0:
                 break
@@ -61,6 +62,7 @@ def Atacar(a,b):
             print(text1)
             a.SetVida((a.GetVida()-b.GetDamage()))#personaje 2 ataca a personaje 1
             time.sleep(1)
+            Vacio()
             VerificarVida(a,b)
             if v==0:
                 break
@@ -71,6 +73,7 @@ def Atacar(a,b):
             print(text)
             a.SetVida((a.GetVida()-b.GetDamage()))##personaje 1 ataca a personaje 2
             time.sleep(1)
+            Vacio()
             VerificarVida(a,b)
             if v==0:
                 break
@@ -84,6 +87,7 @@ def Atacar(a,b):
             print(text)
             a.SetVida((a.GetVida()-b.GetDamage()))##personaje 1 ataca a personaje 2
             time.sleep(1)
+            Vacio()
             VerificarVida(a,b)
             if v==0:
                 break
@@ -92,6 +96,7 @@ def Atacar(a,b):
             print(text1)
             b.SetVida((b.GetVida()-a.GetDamage()))#personaje 2 ataca a personaje 1
             time.sleep(1)
+            Vacio()
             VerificarVida(b,a)
             if v==0:
                 break
@@ -161,6 +166,7 @@ def VerificarVida(a,b):
     v=1
     if a.GetVida()<=0:
         a.SetVida(0)
+        Vacio()
         texto="{} a quedado con {} vida...".format(a.GetNombre(),a.GetVida())
         print(texto)
         v=0

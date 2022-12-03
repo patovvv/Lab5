@@ -21,14 +21,16 @@ class Enano(Personaje):
                 a="Enano - {}".format(self.GetNombre())
                 print(a)
                 print("Habilidad especial: Aumenta vida")
+                Vacio()
                 valor=int(input("Ingrese un numero entre 50 y 100: "))
                 while valor<50 or valor>100:
                     valor=int(input("Solo numeros entre 50 y 100... tambien puede incluirlos: "))
                 valorr=valor//2
                 self.SetVida(self.GetVida()+valorr)
+                Vacio()
                 texto="La vida de {} a aumentado en {}, la nueva vida total es: {}".format(self.GetNombre(),valorr,self.GetVida())
                 print(texto)    
-                Vacio()     
+                Espacio()    
                 break           
             except:
                 Vacio()
@@ -36,19 +38,22 @@ class Enano(Personaje):
 
 
     def Historia(self):
-        return super().Historia()
+        Vacio()
+        texto="Los Enanos han intentado evitar la guerra de los 300 años, pero no han conseguido escapar de esta. Esto marcara la esclavitud de la raza Enana...Hasta que ocurra una posible futura revolucion!"
+        print(texto)
 
     def Victoria(self):
         texto="{} a salido victorioso!".format(self.GetNombre())
         print(texto)
         Vacio()
         print(self)
+        Vacio()
 
     def Derrota(self):
-        text="{} a perdido...".format(self.GetNombre())
-        texto="Los Enanos han intentado evitar la guerra de los 300 años, pero no han conseguido escapar de esta. Esto marcara la esclavitud de la raza Enana...Hasta que ocurra una posible futura revolucion"
+        text="{} a sido derrotado...".format(self.GetNombre())
         print(text)
-        print(texto)
+        self.Historia()
 def Vacio():
     print("")
-    
+def Espacio():
+    enter=input("Ingrese la tecla enter para continuar...")
